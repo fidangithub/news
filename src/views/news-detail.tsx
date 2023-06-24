@@ -7,15 +7,22 @@ const Root = styled(Container)(({ theme }: { theme: Theme }) => ({
 	display: 'flex',
 	flexDirection: 'column',
 	alignItems: 'center',
+
 	'& .image': {
-		width: '90%',
 		height: '500px',
 		objectFit: 'cover',
 		borderRadius: '10px',
 		marginBottom: theme.spacing(6),
+		width: '90%',
 	},
 	'& .content': {
-		padding: theme.spacing(0, 12),
+		padding: theme.spacing(0, 10),
+		[theme.breakpoints.down('md')]: {
+			padding: theme.spacing(0, 4),
+		},
+		[theme.breakpoints.down('sm')]: {
+			padding: theme.spacing(0, 2),
+		},
 	},
 	'& .link': {
 		color: theme.palette.text.primary,

@@ -21,7 +21,7 @@ const Root = styled(Box)(({ theme }: { theme: Theme }) => ({
 	padding: theme.spacing(3, 6),
 	background: theme.palette.background.default,
 	[theme.breakpoints.down('sm')]: {
-		padding: theme.spacing(1, 6),
+		padding: theme.spacing(1, 2),
 	},
 	position: 'sticky',
 	top: 0,
