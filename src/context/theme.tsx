@@ -9,7 +9,7 @@ type ThemeContextProps = {
 };
 
 const ThemeContext = createContext<ThemeContextProps>({
-	theme: 'light',
+	theme: 'dark',
 	toggleTheme: () => {},
 	isDarkMode: false,
 });
@@ -21,7 +21,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
 	const [theme, setTheme] = useLocalStorage<'light' | 'dark'>(
 		'@Theme',
-		'light',
+		'dark',
 		{
 			raw: true,
 		},
